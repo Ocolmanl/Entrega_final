@@ -1,0 +1,48 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+    Alumnos
+{% endblock title %}
+
+{% block content %}
+    <header>
+        <h1 class="text-center" style="padding-top: 1.5cm; padding-bottom: 0.5cm; color: #3a7765;">Alumnos</h1>
+    </header>
+    <ul class="list-unstyled">
+        <ul class="list-unstyled">
+            {% for alumno in alumnos %}
+            <li>
+                <p class="font-weight-bold text-center" style="font-size: 1.25rem;">Apellido y Nombre: {{ alumno.apellido }} {{ alumno.nombre }}</p>
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="font-weight-bold">Email:</td>
+                                <td>{{ alumno.email }}</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-bold">Teléfono:</td>
+                                <td>{{ alumno.telefono }}</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-bold">DNI:</td>
+                                <td>{{ alumno.dni }}</td>
+                            </tr>
+                            <tr>
+                                <td class="font-weight-bold">Fecha de Nacimiento:</td>
+                                <td>{{ alumno.fecha_nacimiento }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="text-center">
+                    <a href="#!" class="btn btn-warning btn-sm m-1">Cambiar</a>
+                    <a href="#!" class="btn btn-danger btn-sm m-1">Borrar</a>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+        
+        
+    
+{% endblock content %}
