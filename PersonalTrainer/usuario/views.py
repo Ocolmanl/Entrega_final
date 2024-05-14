@@ -17,12 +17,12 @@ def alumnos_list(request):
     contexto = {"alumnos": consulta}
     return render(request, "usuario/consulta_alumnos.html", contexto)
 
-def alumno_create(request):
+def alumnos_create(request):
     if request.method == "POST":
         form = AlumnoCretaForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect("producto:productocategoria_list")
+            return redirect("usuario:index")
     else:  # GET
         form = AlumnoCretaForm()
     return render(request, "usuario/create_alumnos.html", {"form": form})
