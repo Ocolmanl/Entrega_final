@@ -6,7 +6,13 @@
 
 {% block content %}
 <header>
-    <h1 class="text-center" style="padding-top: 1.5cm; padding-bottom: 0.5cm; color: #3a7765;">Nuevo Alumno</h1>
+    <h1 class="text-center" style="padding-top: 1.5cm; padding-bottom: 0.5cm; color: #3a7765;">
+        {% if form.instance.pk %}
+            Edicion Alumno 
+        {% else %}
+            Nuevo Alumno
+        {% endif %}
+    </h1>
 </header>
 <form method="post" class="p-3">
     {% csrf_token %}
@@ -15,6 +21,7 @@
     </table>
     <div class="text-center mt-3">
         <button type="submit" class="btn btn-primary">Guardar</button>
+        <a href="{% url 'usuario:alumnos_list' %}" class="btn btn-outline-secondary" style="width: 23%; color: blue;">Volver</a>
     </div>
 </form>
 

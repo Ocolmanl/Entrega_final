@@ -36,15 +36,27 @@
                     </table>
                 </div>
                 <div class="text-center">
+                    <a href="" class="btn btn-warning btn-sm m-1">Editar</a>
                     <a href="" class="btn btn-danger btn-sm m-1">Borrar</a>
                 </div>
+                
+                
             </li>
             {% endfor %}
         </ul>
-        <div style="text-align: center; padding: 10px; margin-bottom: 75px;">
-            <a href="{% url 'usuario:alumnos_create' %}" class="btn btn-primary" style="width: 80%; color: white;">Agregar nuevo Alumno</a>
+        <div class="container text-center" style="padding: 10px; margin-bottom: 75px;">
+            <div class="row">
+                <div class="col-12 col-md-6 mb-2">
+                    <a href="{% url 'usuario:alumnos_create' %}" class="btn btn-primary btn-block" style="width: 80%; color: white;">Agregar nuevo Alumno</a>
+                </div>
+                <div class="col-12 col-md-6 mb-2">
+                    <a href="{% url 'usuario:alumnos_list' %}" class="btn btn-outline-secondary btn-block" style="width: 80%; color: blue;">Volver a Alumnos</a>
+                </div>
+            </div>
         </div>
         
+        
+        </div>
         
     
 {% endblock content %}

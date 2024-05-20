@@ -12,8 +12,10 @@
         <table class="table">
             {{ form.as_table }}
         </table>
-        <div class="text-center mt-3">
-            <button type="submit" class="btn btn-primary">Guardar</button>
+        <div style="text-align: center; padding: 10px; margin-bottom: 75px;">
+            <button type="submit" class="btn btn-primary" >Guardar</button>
+            <a href="{% url 'usuario:rutina_main' %}" class="btn btn-outline-secondary" style="width: 23%; color: blue;">Volver</a>
         </div>
+        
     </form> 
 {% endblock content %}
