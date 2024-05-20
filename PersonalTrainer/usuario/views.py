@@ -23,7 +23,7 @@ def alumnos_update(request, pk: int):
         form = Alumno(request.POST, instance=consulta)
         if form.is_valid():
             form.save()
-            return redirect("usuario/alumnos_list.html")
+            return redirect("usuario:alumnos_list")
     else:  # GET
         form = Alumno(instance=consulta)
     return render(request, "usuario/alumnos_form.html", {"form": form})
@@ -32,8 +32,9 @@ def alumnos_delete(request, pk: int):
     consulta = Alumno.objects.get(id=pk)
     if request.method == "POST":
         consulta.delete()
-        return redirect("usuario:consulta_alumnos.html")
+        return redirect("usuario:alumnos_list")
     return render(request, "usuario/confirm_delete_alumno.html", {"object": consulta})
+
 def alumnos_create(request):
     if request.method == "POST":
         form = AlumnoCreateForm(request.POST)
