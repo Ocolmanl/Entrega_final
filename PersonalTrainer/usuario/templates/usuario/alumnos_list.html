@@ -8,6 +8,22 @@
     <header>
         <h1 class="text-center" style="padding-top: 1.5cm; padding-bottom: 0.5cm; color: #3a7765;">Alumnos</h1>
     </header>
+    <div class="container mt-5">
+        <div class="row mb-3">
+            <div class="col-lg-6">
+                <form action="{% url 'usuario:alumnos_list' %}"
+                    method="get"
+                    class="input-group">
+                    <input type="text"
+                        name="busqueda"
+                        class="form-control"
+                        placeholder="Buscar por apellido...">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="submit">Buscar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     <ul class="list-unstyled">
         <ul class="list-unstyled">
             {% for alumno in alumnos %}
@@ -50,7 +66,7 @@
                     <a href="{% url 'usuario:alumnos_create' %}" class="btn btn-primary btn-block" style="width: 80%; color: white;">Agregar nuevo Alumno</a>
                 </div>
                 <div class="col-12 col-md-6 mb-2">
-                    <a href="{% url 'usuario:alumnos_list' %}" class="btn btn-outline-secondary btn-block" style="width: 80%; color: blue;">Volver a Alumnos</a>
+                    <a href="{% url 'usuario:index' %}" class="btn btn-outline-secondary btn-block" style="width: 80%; color: blue;">Volver a Alumnos</a>
                 </div>
             </div>
         </div>

@@ -11,7 +11,7 @@ def alumnos_list(request):
     busqueda = request.GET.get("busqueda", None)
     if busqueda:
         print(busqueda)
-        consulta = Alumno.objects.filter(nombre__icontains=busqueda)
+        consulta = Alumno.objects.filter(apellido__icontains=busqueda)
     else:
         consulta = Alumno.objects.all()
     contexto = {"alumnos": consulta}

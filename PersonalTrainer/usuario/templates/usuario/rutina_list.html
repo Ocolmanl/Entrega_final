@@ -12,7 +12,7 @@
         <ul class="list-unstyled">
             {% for rutina in rutinas %}
             <li>
-                <p class="font-weight-bold text-center" style="font-size: 1.25rem;">Alumno: {{ rituna.alumno }}</p>
+                <p class="font-weight-bold text-center" style="font-size: 1.25rem;">Alumno: {{ rutina.alumno }}</p>
                 <div class="table-responsive">
                     <table class="table table-bordered">
                         <tbody>
@@ -34,10 +34,13 @@
                             </tr>
                         </tbody>
                     </table>
+                    <div class="text-center">
+                        <a href="" class="btn btn-warning btn-sm m-1">Editar</a>
+                        <a href="" class="btn btn-danger btn-sm m-1">Borrar</a>
+                    </div
                 </div>
                 <div class="text-center">
                     <a href="" class="btn btn-close-white btn-sm m-1">Volver a Rutina</a>
-                    
                 </div>
             </li>
             {% endfor %}
