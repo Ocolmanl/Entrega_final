@@ -1,0 +1,21 @@
+{% extends 'core/base.html' %}
+{% block title %}
+    Alumno
+{% endblock title %}
+
+{% block content %}
+
+    <div class="container mt-4">
+        <p class="fs-5 fst-italic text-center">¿Confirma eliminar la rutina de"{{ object.alumno }}"?</p>
+    
+        <div class="d-flex justify-content-center">
+            <form method="post" class="me-2">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">Confirmar</button>
+            </form>
+            <a href="{% url 'usuario:index' %}" class="btn btn-secondary">Volver al inicio</a>
+        </div>
+    </div>
+
+{% endblock content %}
+

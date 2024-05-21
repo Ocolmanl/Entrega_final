@@ -67,3 +67,21 @@ def rutina_list(request):
 
 def rutina_main(request):
     return render(request, 'usuario/rutina_main.html')
+
+def rutina_update(request, pk: int):
+    consulta = get_object_or_404(Rutina, id=pk)
+    if request.method == "POST":
+        form = RutinaCreateForm(request.POST, instance=consulta)
+        if form.is_valid():
+            form.save()
+            return redirect("usuario:rutina_list")
+    else:  # GET
+        form = RutinaCreateForm(instance=consulta)
+    return render(request, "usuario/rutina_form.html", {"form": form})
+
+def rutina_delete(request, pk: int):
+    consulta = Rutina.objects.get(id=pk)
+    if request.method == "POST":
+        consulta.delete()
+        return redirect("usuario:rutina_list")
+    return render(request, "usuario/confirm_delete_rutina.html", {"object": consulta})
