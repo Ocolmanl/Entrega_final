@@ -13,4 +13,6 @@ urlpatterns = [
     path('rutina/main', views.rutina_main, name='rutina_main'),
     path('rutina/list', views.rutina_list, name='rutina_list'),
     path('alumno/rutina', views.rutina_create, name='rutina_create'),
+    path('rutina/update/<int:pk>', views.rutina_update, name='rutina_update'),
+    path('rutina/delete/<int:pk>', views.rutina_delete, name='rutina_delete'),
 ]
