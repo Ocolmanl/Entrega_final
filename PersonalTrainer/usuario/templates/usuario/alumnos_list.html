@@ -52,7 +52,7 @@
                     </table>
                 </div>
                 <div class="text-center">
-                    <a href="#!" class="btn btn-warning btn-sm m-1">Editar</a>
+                    <a href="{% url 'usuario:alumnos_update' alumno.id %}" class="btn btn-warning btn-sm m-1">Editar</a>
                     <a href="{% url 'usuario:alumnos_delete' alumno.id %}" class="btn btn-danger btn-sm m-1">Eliminar</a>
                 </div>
                 

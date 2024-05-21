@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from usuario.forms import AlumnoCreateForm, RutinaCreateForm
 from usuario.models import Alumno, Rutina
 
@@ -18,14 +18,14 @@ def alumnos_list(request):
     return render(request, "usuario/alumnos_list.html", contexto)
 
 def alumnos_update(request, pk: int):
-    consulta = Alumno.objects.get(id=pk)
+    consulta = get_object_or_404(Alumno, id=pk)
     if request.method == "POST":
-        form = Alumno(request.POST, instance=consulta)
+        form = AlumnoCreateForm(request.POST, instance=consulta)
         if form.is_valid():
             form.save()
             return redirect("usuario:alumnos_list")
     else:  # GET
-        form = Alumno(instance=consulta)
+        form = AlumnoCreateForm(instance=consulta)
     return render(request, "usuario/alumnos_form.html", {"form": form})
 
 def alumnos_delete(request, pk: int):
