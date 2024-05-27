@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block title %}
-    Flor_Fit Personal Trainer
+    Personal_Trainer
 {% endblock title %}
 
 {% block content %}
@@ -13,11 +13,11 @@
             <div class="row gx-5 justify-content-center">
                 <div class="col-lg-6">
                     <div class="text-center my-5">
-                        <h1 class="display-5 fw-bolder text-white mb-2">Bienvenidos a Flor_fit Personal Trainer</h1>
-                        <p class="lead text-white-50 mb-4">Flor_fit Personal Trainer es la plataforma ideal para alumnos comprometidos con el logro de sus metas de fitness y    bienestar. Mi objetivo es facilitar un camino claro y estructurado hacia el éxito en tus entrenamientos, proporcionando herramientas personalizadas y accesibles para gestionar   rutinas de ejercicio de manera eficiente y efectiva.</p>
+                        <h1 class="display-5 fw-bolder text-white mb-2">Bienvenidos a Personal_Trainer</h1>
+                        <p class="lead text-white-50 mb-4"> Personal_Trainer es la plataforma ideal para alumnos comprometidos con el logro de sus metas de fitness y    bienestar. Mi objetivo es facilitar un camino claro y estructurado hacia el éxito en tus entrenamientos, proporcionando herramientas personalizadas y accesibles para gestionar   rutinas de ejercicio de manera eficiente y efectiva.</p>
                         <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
                             <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">Empecemos</a>
-                            <a class="btn btn-outline-light btn-lg px-4" href="#!">Saber más</a>
+                            <a class="btn btn-outline-light btn-lg px-4" href="#Planes">Planes</a>
                         </div>
                     </div>
                 </div>
@@ -29,29 +29,30 @@
         <div class="container px-5 my-5">
             <div class="row gx-5">
                 <div class="col-lg-4 mb-5 mb-lg-0">
-                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-collection"></i></div>
-                    <h2 class="h4 fw-bolder">Featured title</h2>
-                    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-                    <a class="text-decoration-none" href="#!">
-                        Call to action
+                    <h2 class="h4 fw-bolder">Entrenamiento Grupales</h2>
+                    <ul>
+                        <li><strong>Motivación Colectiva:</strong> Entrenar en grupo fomenta un ambiente motivador y competitivo, ayudando a mantener el compromiso y la constancia.</li>
+                        <li><strong>Apoyo Social:</strong> Crearás vínculos con otras personas que comparten tus mismos objetivos, ofreciendo un apoyo mutuo que facilita el logro de metas.</li>
+                        <li><strong>Diversión:</strong> Las clases grupales suelen ser dinámicas y divertidas, haciendo que el ejercicio sea una experiencia agradable.</li>
+                        <li><strong>Variedad de Ejercicios:</strong> Los entrenadores diseñan rutinas variadas para mantener las sesiones frescas y desafiantes.</li>
+                        <li><strong>Coste Efectivo:</strong> Generalmente, el entrenamiento grupal es más económico en comparación con el individual, permitiendo el acceso a entrenamientos de calidad a un menor costo.</li>
+                    </ul>
+                    <a class="text-decoration-none" href="#Grupal">
+                        Inscribirse
                         <i class="bi bi-arrow-right"></i>
                     </a>
                 </div>
                 <div class="col-lg-4 mb-5 mb-lg-0">
-                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-building"></i></div>
-                    <h2 class="h4 fw-bolder">Featured title</h2>
-                    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-                    <a class="text-decoration-none" href="#!">
-                        Call to action
-                        <i class="bi bi-arrow-right"></i>
-                    </a>
-                </div>
-                <div class="col-lg-4">
-                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
-                    <h2 class="h4 fw-bolder">Featured title</h2>
-                    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-                    <a class="text-decoration-none" href="#!">
-                        Call to action
+                    <h2 class="h4 fw-bolder">Entrenamiento Individuales</h2>
+                    <ul>
+                        <li><strong>Atención Personalizada:</strong> El entrenador se centra exclusivamente en ti, adaptando los ejercicios a tus necesidades y objetivos específicos.</li>
+                        <li><strong>Progreso Rápido:</strong> Al tener un plan de entrenamiento diseñado exclusivamente para ti, es más probable que veas resultados más rápidos y efectivos.</li>
+                        <li><strong>Flexibilidad Horaria:</strong> Puedes coordinar las sesiones según tu disponibilidad, facilitando la integración del ejercicio en tu rutina diaria.</li>
+                        <li><strong>Mayor Supervisión:</strong> El entrenador puede corregir tu técnica en tiempo real, minimizando el riesgo de lesiones y optimizando la eficacia de los ejercicios.</li>
+                        <li><strong>Objetivos Específicos:</strong> Ideal para quienes tienen objetivos muy concretos, como preparar una competencia, rehabilitarse de una lesión o mejorar en una disciplina particular.</li>
+                    </ul>
+                    <a class="text-decoration-none" href="#Individual">
+                        Inscribirse
                         <i class="bi bi-arrow-right"></i>
                     </a>
                 </div>
@@ -59,7 +60,7 @@
         </div>
     </section>
     <!-- Pricing section-->
-    <section class="bg-light py-5 border-bottom">
+    <section class="bg-light py-5 border-bottom" id="Planes">
         <div class="container px-5 my-5">
             <div class="text-center mb-5">
                 <h2 class="fw-bolder">Paga a medida que creces</h2>
@@ -70,7 +71,7 @@
                 <div class="col-lg-6 col-xl-4">
                     <div class="card mb-5 mb-xl-0">
                         <div class="card-body p-5">
-                            <div class="small text-uppercase fw-bold">
+                            <div class="small text-uppercase fw-bold" id="Grupal">
                                 Standar Plan
                             </div>
                             <div class="mb-3">
@@ -109,7 +110,7 @@
                     <div class="card">
                         <div class="card-body p-5">
                             <div class="small text-uppercase fw-bold text-muted">
-                                <i class="bi bi-star-fill text-warning"></i>
+                                <i class="bi bi-star-fill text-warning" id="Individual"></i>
                                 Platinun Plan</div>
                             <div class="mb-3">
                                 <span class="display-4 fw-bold">$50.000</span>

@@ -1,0 +1,30 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Login
+{% endblock title %}
+
+{% block content %}
+<header>
+    <h1 class="text-center" style="padding-top: 40px; padding-bottom: 0.5cm; color: #3a7765;">Bienvenido Personal_Trainer</h1>
+</header>
+<div class="container login-container; padding-top 20px>
+    <div class="login-form">
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                {{ form.as_p }}
+            </div>
+                <input type="hidden" name="next" value="{% url 'usuario:index' %}">
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
+            </div>
+            <div class="form-group">
+                <a href="{% url 'core:index' %}" class="btn btn-secondary btn-block">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock content %}
