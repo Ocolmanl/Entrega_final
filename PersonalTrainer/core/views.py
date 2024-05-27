@@ -9,3 +9,6 @@ def index(request):
 class CustomLoginView(LoginView):
     authentication_form = CustomAuthenticationForm
     template_name = 'core/login.html'
+    
+def about(request):
+    return render(request, 'core/about.html')
