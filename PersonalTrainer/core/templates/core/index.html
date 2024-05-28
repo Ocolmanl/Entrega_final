@@ -13,52 +13,20 @@
             <div class="row gx-5 justify-content-center">
                 <div class="col-lg-6">
                     <div class="text-center my-5">
+                        {% if user.is_authenticated %}
+                            <p class="text-info">{{mensaje}} ¡Bienvenido!</p>
+                        {% endif %}
                         <h1 class="display-5 fw-bolder text-white mb-2">Bienvenidos a Personal_Trainer</h1>
-                        <p class="lead text-white-50 mb-4"> Personal_Trainer es la plataforma ideal para alumnos comprometidos con el logro de sus metas de fitness y    bienestar. Mi objetivo es facilitar un camino claro y estructurado hacia el éxito en tus entrenamientos, proporcionando herramientas personalizadas y accesibles para gestionar   rutinas de ejercicio de manera eficiente y efectiva.</p>
+                        <p class="lead text-white-50 mb-4"> Personal_Trainer es la plataforma ideal para administrar tus alumnos comprometidos con el logro de sus metas de fitness y bienestar. Nuetsro objetivo es facilitar un camino claro y estructurado hacia el éxito en la administracion y seguimiento de los entrenamientos de tus alumnos, proporcionando herramientas personalizadas y accesibles para gestionar rutinas de ejercicio de manera eficiente y efectiva.</p>
                         <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-                            <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#features">Empecemos</a>
-                            <a class="btn btn-outline-light btn-lg px-4" href="#Planes">Planes</a>
+                            <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#Planes">Planes</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-    <!-- Features section-->
-    <section class=" border-bottom" id="features" style="align-items: center">
-        <div class="container px-5 my-5">
-            <div class="row gx-5">
-                <div class="col-lg-4 mb-5 mb-lg-0">
-                    <h2 class="h4 fw-bolder">Entrenamiento Grupales</h2>
-                    <ul>
-                        <li><strong>Motivación Colectiva:</strong> Entrenar en grupo fomenta un ambiente motivador y competitivo, ayudando a mantener el compromiso y la constancia.</li>
-                        <li><strong>Apoyo Social:</strong> Crearás vínculos con otras personas que comparten tus mismos objetivos, ofreciendo un apoyo mutuo que facilita el logro de metas.</li>
-                        <li><strong>Diversión:</strong> Las clases grupales suelen ser dinámicas y divertidas, haciendo que el ejercicio sea una experiencia agradable.</li>
-                        <li><strong>Variedad de Ejercicios:</strong> Los entrenadores diseñan rutinas variadas para mantener las sesiones frescas y desafiantes.</li>
-                        <li><strong>Coste Efectivo:</strong> Generalmente, el entrenamiento grupal es más económico en comparación con el individual, permitiendo el acceso a entrenamientos de calidad a un menor costo.</li>
-                    </ul>
-                    <a class="text-decoration-none" href="#Grupal">
-                        Inscribirse
-                        <i class="bi bi-arrow-right"></i>
-                    </a>
-                </div>
-                <div class="col-lg-4 mb-5 mb-lg-0">
-                    <h2 class="h4 fw-bolder">Entrenamiento Individuales</h2>
-                    <ul>
-                        <li><strong>Atención Personalizada:</strong> El entrenador se centra exclusivamente en ti, adaptando los ejercicios a tus necesidades y objetivos específicos.</li>
-                        <li><strong>Progreso Rápido:</strong> Al tener un plan de entrenamiento diseñado exclusivamente para ti, es más probable que veas resultados más rápidos y efectivos.</li>
-                        <li><strong>Flexibilidad Horaria:</strong> Puedes coordinar las sesiones según tu disponibilidad, facilitando la integración del ejercicio en tu rutina diaria.</li>
-                        <li><strong>Mayor Supervisión:</strong> El entrenador puede corregir tu técnica en tiempo real, minimizando el riesgo de lesiones y optimizando la eficacia de los ejercicios.</li>
-                        <li><strong>Objetivos Específicos:</strong> Ideal para quienes tienen objetivos muy concretos, como preparar una competencia, rehabilitarse de una lesión o mejorar en una disciplina particular.</li>
-                    </ul>
-                    <a class="text-decoration-none" href="#Individual">
-                        Inscribirse
-                        <i class="bi bi-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+ 
     <!-- Pricing section-->
     <section class="bg-light py-5 border-bottom" id="Planes">
         <div class="container px-5 my-5">
@@ -81,27 +49,27 @@
                             <ul class="list-unstyled mb-4">
                                 <li class="mb-2">
                                     <i class="bi bi-check text-primary"></i>
-                                    <strong>Rutina Grupal</strong>
+                                    <strong>Administracion hastra 30 alumnos</strong>
                                 </li>
                                 <li class="mb-2">
                                     <i class="bi bi-check text-primary"></i>
-                                    Seguimiento Semanal
+                                    Envio notificaciones via whatsApp, email.
                                 </li>
                                 <li class="mb-2">
                                     <i class="bi bi-check text-primary"></i>
-                                    Renovacion mensual de rutinas  
+                                    Soporte Técnico 7x24  
                                 </li>
                                 
                                 <li class="mb-2">
                                     <i class="bi bi-x"></i>
-                                    No se realizan modificaciones 
+                                    Integracion IA
                                 </li>
                                 <li class="text-muted">
                                     <i class="bi bi-x"></i>
-                                    Sin asistencia en Gym
+                                    Ancho banda, hasta 4 usuarios en simultaneo
                                 </li>
                             </ul>
-                            <div class="d-grid"><a class="btn btn-primary" href="#!">Elegir plan</a></div>
+                            <div class="d-grid"><a class="btn btn-primary" href="{% url 'core:register' %}">Elegir plan</a></div>
                         </div>
                     </div>
                 </div>
@@ -119,34 +87,30 @@
                             <ul class="list-unstyled mb-4">
                                 <li class="mb-2">
                                     <i class="bi bi-check text-primary"></i>
-                                    <strong>Rutina Individual</strong>
+                                    <strong>Alumnos ilimitados</strong>
                                 </li>
                                 <li class="mb-2">
                                     <i class="bi bi-check text-primary"></i>
-                                    Seguimiento diario
+                                    Integracion IA en respuetas de mensajes
                                 </li>
                                 <li class="mb-2">
                                     <i class="bi bi-check text-primary"></i>
-                                    Renovacion semanal de rutinas
+                                    Soporte Técnico 7x24
                                 </li>
                                 <li class="mb-2">
                                     <i class="bi bi-check text-primary"></i>
-                                    Adecuación a objetivos personales
+                                    Hasta 3 módulos personalizable
                                 </li>
                                 <li class="mb-2">
                                     <i class="bi bi-check text-primary"></i>
-                                    Acompañamiento en gym (excluyentes fuera de la localidad Salta Capital)
-                                </li>
-                                <li class="mb-2">
-                                    <i class="bi bi-check text-primary"></i>
-                                    Videos ilustrativos
+                                    Videos ilustrativos integrados
                                 </li>
                             </ul>
-                            <div class="d-grid"><a class="btn btn-outline-primary" href="#!">Elegir plan</a></div>
+                            <div class="d-grid"><a class="btn btn-outline-primary" href="{% url 'core:register' %}">Elegir plan</a></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-{% endblock content %}
+ {% endblock content %}
