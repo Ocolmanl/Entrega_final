@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.contrib. auth.views import LoginView
-from .forms import CustomAuthenticationForm
+from .forms import CustomAuthenticationForm, CustomUserCreationForm
+from django.http import HttpResponse, HttpRequest
 
 # Create your views here.
 def index(request):
@@ -12,3 +13,14 @@ class CustomLoginView(LoginView):
     
 def about(request):
     return render(request, 'core/about.html')
+
+def register(request: HttpRequest) -> HttpResponse:
+    if request.method == 'POST':
+        form= CustomUserCreationForm(request.POST)
+        if form.is_valid():
+            username = form.cleaned_data['username']
+            form.save()
+            return render(request, 'core/index.html', {'mensaje': f'Usuario "{username}" creado'} )
+    else:
+        form= CustomUserCreationForm()
+    return render(request, 'core/register.html', {'form': form})
