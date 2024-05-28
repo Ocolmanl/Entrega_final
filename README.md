@@ -4,17 +4,19 @@ Comisión: 54140
 
 Alumno: Colman Sebastian
 
-## Explicación breve del protecto en cuanto al servicio: 
-    Esta app tiene la finalidad de darle la posibilidad a instructores de tener un control en el flujo de sus alumnos centralizando los mismos en una app, a la cual se podran suscribir mediante el pago y tener la posibidad de tener sus planes de entrenamiento
+Profesor: Acevedo Esteban
 
-## Explicación breve técnica: 
+Tutor: Romano Juan Manuel
 
-    cuenta con una url central desde la cual se desgloza la app con cada app tiene sus propias templates y metodos
+## Proyecto: 
+    Esta app esta dirigida a Peronal treiners, en cual tendrá un control de sus alumnos, donde podra ir cargando sus rutinas, avances, de manera simple.
+
+## Objetivos: 
+
+    El personal trainer / usuario de la aplicacion contará con un sistema sencillo, ordenado que le dará la posibilidad de acceder a las rutinas y seguimientos de sus alumnos, facilitando la diria de su trabajo al tener toda la información en al app
 
 ## Mejoras futuras:
     - Registro de alumnos
-    - App de ingreso de alumnos mediante 
+    - App de ingreso de alumnos para verificar sus rutinas 
     - Carrito para suscripcion
-
-## Problemas conocidos:
-    - la falta de conocimiento jajaja
+    - Mejorar procedimiento de logueo.
